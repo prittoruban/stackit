@@ -8,8 +8,8 @@ import { auth } from "@clerk/nextjs/server";
 import { CoreMessage, generateText } from "ai";
 import { createClerkToolkit } from "@clerk/agent-toolkit/ai-sdk";
 import { openai } from "@ai-sdk/openai";
-import { censorPost, reportUser } from "@/src/tools/tools";
-import { systemPrompt } from "@/src/tools/prompt";
+import { censorPost, reportUser } from "@/tools/tools";
+import { systemPrompt } from "@/tools/prompt";
 
 export type PostImageData = {
   base64: string;
