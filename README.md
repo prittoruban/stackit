@@ -7,7 +7,7 @@ and focused on the core experience of asking and answering questions within a
 com m unity.
 
 ## 👥 Team Name 
-(*Will be updated once the team name is available on the portal*)
+Team 2317
 
 ## 📧 Team Lead's Email ID
 pritcy026@rmkcet.ac.in
