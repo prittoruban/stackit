@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/header/Header";
 import { SanityLive } from "@/sanity/lib/live";
 import { getSubreddits } from "@/sanity/lib/subreddit/getSubreddits";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default async function RootLayout({
         >
           <Header subreddits={subredditsData} />
           <div className="flex flex-col">{children}</div>
+          <Footer/>
           <SanityLive />
         </body>
       </html>

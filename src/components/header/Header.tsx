@@ -4,7 +4,7 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "../ui/button";
 import {
   Search,
-  Bell,
+  // Bell,
   Plus,
   Home,
   Users,
@@ -184,12 +184,12 @@ function Header({ subreddits }: HeaderProps) {
               </button>
 
               {/* Notifications */}
-              <SignedIn>
+              {/* <SignedIn>
                 <button className="relative p-2 rounded-xl hover:bg-gray-100/70 dark:hover:bg-gray-800/70 transition-all duration-200 hidden sm:block">
                   <Bell className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                   <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full"></span>
                 </button>
-              </SignedIn>
+              </SignedIn> */}
 
               {/* Ask Question Button */}
               <div className="hidden sm:block">
