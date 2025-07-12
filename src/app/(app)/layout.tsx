@@ -18,8 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Reddish",
-  description: "Reddish",
+  title: "Stackit",
+  description:
+    "Stack your posts, comments, and discussions in a Reddit-like platform built with Next.js and Sanity.",
 };
 
 export default async function RootLayout({
@@ -29,22 +30,27 @@ export default async function RootLayout({
 }>) {
   // Fetch subreddits data on the server
   const subreddits = await getSubreddits();
-  
+
   // Transform the data to match the Header component's expected format
-  const subredditsData = subreddits?.filter(sub => sub.slug !== null).map(sub => ({
-    title: sub.title || "unknown",
-    slug: sub.slug!
-  }));
+  const subredditsData = subreddits
+    ?.filter((sub) => sub.slug !== null)
+    .map((sub) => ({
+      title: sub.title || "unknown",
+      slug: sub.slug!,
+    }));
 
   return (
     <ClerkProvider>
       <html lang="en">
+        <head>
+          <link rel="icon" href="image.png" />
+        </head>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <Header subreddits={subredditsData} />
           <div className="flex flex-col">{children}</div>
-          <Footer/>
+          <Footer />
           <SanityLive />
         </body>
       </html>
