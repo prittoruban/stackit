@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Reddish Sanity Admin Panel",
-  description: "Reddish Sanity Admin Panel",
+  title: "StackIt Admin Panel",
+  description: "StackIt Admin Panel for managing content and settings.",
 };
 
 export default function RootLayout({
